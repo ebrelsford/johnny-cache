@@ -11,7 +11,7 @@ import django
 from django.core.cache.backends import memcached
 
 
-class CacheClass(memcached.CacheClass):
+class CacheClass(memcached.BaseMemcachedCache):
     """
     By checking ``timeout is None`` rather than ``not timeout``, this
     cache class allows for non-expiring cache writes on certain backends,
